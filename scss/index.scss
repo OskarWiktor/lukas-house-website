@@ -1,2 +1,7 @@
+// abstracts
 @import "./abstracts/mixin.scss";
 @import "./abstracts/colors.scss";
+@import "./abstracts/normalize.scss";
+
+// component
+@import "./components/navbar.scss"
