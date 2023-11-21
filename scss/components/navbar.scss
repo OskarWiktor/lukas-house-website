@@ -5,6 +5,7 @@
         align-items: center;
         width: 100%;
         padding: 0px 14px;
+        height: 122px;
         .nav--logo__wrapper {
             display: flex;
             align-items: center;
@@ -28,7 +29,7 @@
                 .nav--pages__list-item {
                     padding: 8px calc(2px + 1dvw);
                     .pages--list-item__link {
-                        font-size: calc(14px + 0.2dvw);
+                        font-size: calc(16px + 0.2dvw);
                         color: rgb(117, 117, 117);
                         position: relative;
                     }
