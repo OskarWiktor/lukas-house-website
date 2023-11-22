@@ -3,7 +3,7 @@
   flex-direction: row;
   width: 100%;
   max-height: 620px;
-  background-color: rgb(6, 46, 33);
+  background-color: $color-dark-green;
   @media (max-width: 768px) {
     flex-direction: column;
     max-height: fit-content;
@@ -37,18 +37,18 @@
         padding: 12px;
     }
     .info--content__title {
-      color: rgb(216, 216, 216);
-      font-size: calc(16px + 0.7dvw);
-      line-height: calc(34px + 0.6dvw);
+      color: $color-almost-white;
+      font-size: $font-size-big;
+      line-height: $font-line-height-big;
       margin-bottom: 8px;
       @media (max-width: 768px) {
         text-align: center;
       }
     }
     .info--content__text {
-      color: rgb(216, 216, 216);
-      font-size: calc(12px + 0.4dvw);
-      line-height: calc(22px + 0.4dvw);
+      color: $color-almost-white;
+      font-size: $font-size-medium;
+      line-height: $font-line-height-medium;
       @media (max-width: 768px) {
         text-align: center;
       }

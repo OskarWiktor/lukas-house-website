@@ -12,3 +12,10 @@
     font-family: AileronBold;
     src: url(../../assets/fonts/Aileron-Bold.otf);
 }
+
+$font-size-big: calc(16px + 0.7dvw);
+$font-size-medium: calc(12px + 0.4dvw);
+$font-size-small: calc(12px + 0.2dvw);
+
+$font-line-height-big: calc(34px + 0.6dvw);
+$font-line-height-medium: calc(22px + 0.4dvw);

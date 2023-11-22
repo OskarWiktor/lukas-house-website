@@ -1,6 +1,6 @@
 .footer {
   display: flex;
-  background-color: rgb(27, 27, 27);
+  background-color: $color-almost-black;
   padding: 88px 138px;
   @media (max-width: 1280px) {
     padding: 68px 48px;
@@ -18,14 +18,18 @@
     }
     .footer--nav {
       .nav--pages {
+        width: fit-content;
         display: flex;
-        flex-direction: column;
+        border-bottom: 1px solid $color-grey;
         .nav--pages__list-item {
             padding: 0px 12px 6px 0px;
           .pages--list-item__link {
-            color: rgb(173, 173, 173);
+            color: $color-grey-from-logo;
             font-size: 18px;
           }
+        }
+        .nav--pages__list-item:last-of-type {
+            padding: 0px 0px 6px 0px;
         }
       }
     }
@@ -35,15 +39,15 @@
     flex-direction: column;
     width: 50%;
     .footer--contact-us__title {
-        color: rgb(214, 214, 214);
-        font-size: calc(16px + 0.7dvw);
+        color: $color-almost-white;
+        font-size: $font-size-big;
     }
     .footer--contact-us__link {
         width: fit-content;
-        font-size: calc(14px + 0.2dvw);
+        font-size: $font-size-small;
         text-transform: uppercase;
-        color: rgb(214, 214, 214);
-        border: 1px solid rgb(173, 173, 173);
+        color: $color-almost-white;
+        border: 1px solid $color-almost-white;
         border-radius: 24px;
         padding: 8px 24px;
         margin-top: 38px;

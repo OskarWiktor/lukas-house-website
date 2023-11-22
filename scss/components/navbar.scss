@@ -13,7 +13,7 @@
             justify-content: center;
             width: 100%;
             height: 68px;
-            border-bottom: 1px solid rgb(225, 225, 225) ;
+            border-bottom: 1px solid $color-almost-white ;
             .nav--logo__img {
                 height: 34px;
                 width: auto;
@@ -31,7 +31,7 @@
                     padding: 8px calc(2px + 1dvw);
                     .pages--list-item__link {
                         font-size: calc(16px + 0.2dvw);
-                        color: rgb(117, 117, 117);
+                        color: $color-grey;
                         position: relative;
                     }
                     .pages--list-item__link::after {
@@ -46,7 +46,7 @@
                     .pages--list-item__link:hover::after {
                         width: 100%;
                         height: 2px;
-                        background-color: #00421f;
+                        background-color: $color-green-from-logo;
                     }
                 }
             }
