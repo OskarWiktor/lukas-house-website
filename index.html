@@ -14,6 +14,10 @@
       href="./assets/favicon-lukas-house.png"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
   </head>
   <body>
     <header class="header">
@@ -60,39 +64,44 @@
         </nav>
       </nav>
 
-      <div class="hero--wrapper">
-        <div class="hero--content__wrapper">
-          <div class="hero--content__circles">
-            <img
-              class="content--circles__img"
-              src="./assets/img-with-circle-mask-1.png"
-              alt=""
-            />
-            <img
-              class="content--circles__img"
-              src="./assets/img-with-circle-mask-2.png"
-              alt=""
-            />
-            <img
-              class="content--circles__img"
-              src="./assets/img-with-circle-mask-3.png"
-              alt=""
-            />
+      <section class="hero">
+        <div class="hero--wrapper">
+          <div class="hero--content__wrapper">
+            <div class="hero--content__circles">
+              <img
+                class="content--circles__img"
+                src="./assets/img-with-circle-mask-1.png"
+                alt=""
+              />
+              <img
+                class="content--circles__img"
+                src="./assets/img-with-circle-mask-2.png"
+                alt=""
+              />
+              <img
+                class="content--circles__img"
+                src="./assets/img-with-circle-mask-3.png"
+                alt=""
+              />
+            </div>
+            <h1 class="hero--content__title">
+              Zrealizuj swoje marzenia o idealnym domu.
+            </h1>
+            <p class="hero--content__text">
+              Oferujemy kompleksowe usługi remontowe i budowlane, dostosowane do
+              Twoich potrzeb. Dbałość o detal sprawi, że każdy projekt stanie
+              się wyjątkowy.
+            </p>
+            <a class="hero--content__link" href="./pages/realizacje.html">
+              Nasze realizacje &nbsp;
+              <span class="material-symbols-outlined">arrow_right_alt</span>
+            </a>
           </div>
-          <h1 class="hero--content__title">
-            Zrealizuj swoje marzenia o idealnym domu
-          </h1>
-          <p class="hero--content__text">
-            Oferujemy kompleksowe usługi remontowe i budowlane, dostosowane do
-            Twoich potrzeb. Dbałość o detal sprawi, że każdy projekt stanie się
-            wyjątkowy.
-          </p>
-          <a class="hero--content__link" href="./pages/realizacje.html"
-            >Nasze realizacje ->
-          </a>
+          <div class="hero--img__wrapper">
+            <img class="hero--img" src="./assets/index-hero.png" alt="" />
+          </div>
         </div>
-        <img class="hero--img" src="./assets/index-hero.png" alt="" />
-      </div>
+      </section>
     </header>
 
     <main>
@@ -188,8 +197,9 @@
           Chcesz otrzymać bezpłatną wycenę swojego projektu?
         </h3>
         <a class="footer--contact-us__link" href="./pages/kontakt.html"
-          >Napisz do Nas -></a
-        >
+          >Napisz do Nas &nbsp;
+          <span class="material-symbols-outlined"> arrow_right_alt </span>
+        </a>
       </div>
     </footer>
   </body>

@@ -1,76 +1,112 @@
 .header {
-  .hero--wrapper {
+  .hero {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 728px;
-    padding: 64px 24px;
+    padding: 64px;
+
     @media (max-width: 1280px) {
-      flex-direction: column-reverse;
-      height: auto;
-      padding: 48px 12px;
+      padding: 64px 32px;
+    }
+    @media (max-width: 600px) {
+      padding: 24px;
     }
     @media (max-width: 414px) {
-      padding: 16px 8px;
+      padding: 24px 14px;
     }
-    .hero--content__wrapper {
+
+    .hero--wrapper {
       display: flex;
-      flex-direction: column;
-      margin-right: 88px;
-      @media (max-width: 1280px) {
-        margin-right: 0px;
+      width: 100%;
+
+      @media (max-width: 1000px) {
+        flex-direction: column-reverse;
       }
-      .hero--content__circles {
+
+      .hero--content__wrapper {
         display: flex;
-        padding-bottom: calc(36px + 0.8dvw);
-        .content--circles__img {
-          max-width: 164px;
-          height: auto;
-          margin-right: 26px;
+        width: 50%;
+        flex-direction: column;
+        padding: 0px 24px;
+
+        @media (max-width: 1000px) {
+          width: 100%;
+        }
+        @media (max-width: 600px) {
+          padding: 0px 8px;
+        }
+        @media (max-width: 414px) {
+          padding: 0px;
+        }
+
+        .hero--content__circles {
+          display: flex;
+          padding-bottom: calc(36px + 0.8dvw);
+
           @media (max-width: 1280px) {
-            display: none;
+            padding-bottom: calc(24px + 0.4dvw);
+          }
+
+          .content--circles__img {
+            width: 10dvw;
+            height: auto;
+            margin-right: 26px;
+
+            @media (max-width: 1000px) {
+              display: none;;
+            }
+          }
+
+          .content--circles__img:last-of-type {
+            margin-right: 0px;
           }
         }
-        .content--circles__img:last-of-type {
-          margin-right: 0px;
+
+        .hero--content__title {
+          font-size: $font-size-big;
+          line-height: $font-line-height-big;
+          color: $color-almost-black;
+        }
+
+        .hero--content__text {
+          font-size: $font-size-big;
+          line-height: $font-line-height-big;
+          color: $color-almost-black;
+        }
+
+        .hero--content__link {
+          display: flex;
+          align-items: center;
+          color: $color-almost-black;
+          font-size: $font-size-small;
+          font-family: "AileronBold";
+          text-transform: uppercase;
+          margin-top: calc(36px + 0.8dvw);
+
+          @media (max-width: 1000px) {
+            margin-top: calc(24px + 0.4dvw);
+          }
         }
       }
-      .hero--content__title {
-        width: calc(200px + 24dvw);
-        font-size: $font-size-big;
-        line-height: $font-line-height-big;
-        color: $color-almost-black;
-        @media (max-width: 1280px) {
-          text-align: center;
-          width: clamp(240px, 100%, 1200px);
+
+      .hero--img__wrapper {
+        padding: 0px 24px;
+        width: 50%;
+
+        @media (max-width: 1000px) {
+          width: 100%;
+        }
+        @media (max-width: 600px) {
+          padding: 0px 8px;
+        }
+        @media (max-width: 414px) {
+          padding: 0px;
+        }
+
+        .hero--img {
+          display: flex;
+          max-width: 880px;
+          height: auto;
         }
       }
-      .hero--content__text {
-        width: calc(200px + 24dvw);
-        font-size: $font-size-big;
-        line-height: $font-line-height-big;
-        color: $color-almost-black;
-        @media (max-width: 1280px) {
-          text-align: center;
-          width: clamp(240px, 100%, 1200px);
-        }
-      }
-      .hero--content__link {
-        color: $color-almost-black;
-        font-size: $font-size-small;
-        font-family: 'AileronBold';
-        text-transform: uppercase;
-        margin-top: calc(36px + 0.8dvw);
-        @media (max-width: 1280px) {
-          text-align: center;
-        }
-      }
-    }
-    .hero--img {
-      max-width: 880px;
-      height: auto;
     }
   }
 }

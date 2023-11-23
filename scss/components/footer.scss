@@ -55,6 +55,8 @@
         font-size: $font-size-big;
     }
     .footer--contact-us__link {
+        display: flex;
+        align-items: center;
         width: fit-content;
         font-size: $font-size-small;
         text-transform: uppercase;
