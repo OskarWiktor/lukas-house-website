@@ -96,17 +96,21 @@
       display: flex;
       align-items: center;
       width: fit-content;
-      font-size: $font-size-small;
+      font-size: $font-size-uppercase-link;
       text-transform: uppercase;
       color: $color-almost-white;
       border: 1px solid $color-almost-white;
       border-radius: 24px;
       padding: 8px 24px;
       margin-top: 38px;
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.437);
 
       @media (max-width: 1000px) {
         margin-top: 24px;
       }
+    }
+    .footer--contact-us__link:focus {
+      transform: scale(0.96);
     }
   }
 }

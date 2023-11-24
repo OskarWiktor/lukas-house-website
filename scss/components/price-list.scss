@@ -1,0 +1,113 @@
+.price-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $color-almost-black;
+  padding: 128px 64px;
+  margin: 24px 0px;
+
+  @media (max-width: 1280px) {
+    padding: 108px 32px;
+  }
+  @media (max-width: 1000px) {
+    padding: 88px 32px;
+  }
+  @media (max-width: 600px) {
+    padding: 72px 32px;
+  }
+  @media (max-width: 414px) {
+    padding: 56px 14px;
+  }
+  .price-list--info__wrapper {
+    display: flex;
+    width: 100%;
+    padding: 0px 24px;
+    .info--content {
+      width: 50%;
+
+      .info--content__text {
+        color: $color-almost-white;
+        font-size: $font-size-big;
+      }
+      .info--content__contact-us {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        font-size: $font-size-uppercase-link;
+        text-transform: uppercase;
+        color: $color-almost-white;
+        border: 1px solid $color-almost-white;
+        border-radius: 24px;
+        padding: 8px 24px;
+        margin-top: 38px;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.437);
+      }
+      .info--content__contact-us:focus {
+        transform: scale(0.96);
+      }
+    }
+  }
+
+  .price-list--services__wrapper {
+    display: flex;
+    width: 100%;
+
+    .price-list--services {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      padding: 24px;
+      .price-list--service {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        padding: 12px 0px;
+        border-bottom: 1px solid $color-grey;
+        width: 100%;
+        position: relative;
+
+        .price-list--service__number {
+          position: absolute;
+          left: 0px;
+          top: 8px;
+          color: $color-grey;
+          font-size: calc(12px + 0.1dvw);
+        }
+        .price-list--service__name {
+          color: $color-almost-white;
+          padding-left: 48px;
+          font-size: $font-size-medium;
+        }
+        .material-symbols-outlined {
+          position: absolute;
+          right: 9px;
+          color: $color-almost-white;
+        }
+      }
+
+      .service--expand__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+
+        .service--expand {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+          padding: 8px 12px 8px 24px;
+          border-bottom: 1px solid rgb(43, 43, 43);
+          .service--expand__name {
+            color: $color-almost-white;
+            font-size: $font-size-small;
+          }
+          .service--expand__price {
+            color: $color-almost-white;
+            font-size: $font-size-small;
+
+          }
+        }
+      }
+    }
+  }
+}

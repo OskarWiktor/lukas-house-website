@@ -5,6 +5,7 @@
   flex-direction: row;
   width: 100%;
   background-color: $color-dark-green;
+  margin: 24px 0px;
 
   @media (max-width: 1000px) {
     flex-direction: column;
