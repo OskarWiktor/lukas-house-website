@@ -361,8 +361,7 @@
 }
 .price-list .price-list--services__wrapper .price-list--services .price-list--service {
   display: flex;
-  align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   padding: 12px 0px;
   border-bottom: 1px solid rgb(103, 103, 103);
   width: 100%;
@@ -380,31 +379,82 @@
   padding-left: 48px;
   font-size: calc(14px + 0.4dvw);
 }
-.price-list .price-list--services__wrapper .price-list--services .price-list--service .material-symbols-outlined {
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 6px;
   position: absolute;
   right: 9px;
+}
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button .fa-chevron-down, .price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button .fa-times {
   color: rgb(216, 216, 216);
 }
-.price-list .price-list--services__wrapper .price-list--services .service--expand__wrapper {
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button .fa-chevron-down {
+  display: flex;
+}
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button .fa-times {
+  display: none;
+}
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button .service--expand__wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
   display: none;
 }
-.price-list .price-list--services__wrapper .price-list--services .service--expand__wrapper .service--expand {
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button .service--expand__wrapper .service--expand {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   padding: 8px 12px 8px 24px;
   border-bottom: 1px solid rgb(43, 43, 43);
 }
-.price-list .price-list--services__wrapper .price-list--services .service--expand__wrapper .service--expand .service--expand__name {
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button .service--expand__wrapper .service--expand .service--expand__name {
   color: rgb(216, 216, 216);
   font-size: calc(13px + 0.2dvw);
 }
-.price-list .price-list--services__wrapper .price-list--services .service--expand__wrapper .service--expand .service--expand__price {
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button .service--expand__wrapper .service--expand .service--expand__price {
   color: rgb(216, 216, 216);
   font-size: calc(13px + 0.2dvw);
+}
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button.active .fa-chevron-down {
+  display: none;
+}
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button.active .fa-times {
+  display: flex;
+}
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .service--expand__wrapper {
+  display: none;
+}
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .service--expand__wrapper .service--expand {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 8px 12px 8px 24px;
+  border-bottom: 1px solid rgb(43, 43, 43);
+}
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .service--expand__wrapper .service--expand .service--expand__name {
+  color: rgb(216, 216, 216);
+  font-size: calc(13px + 0.2dvw);
+}
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .service--expand__wrapper .service--expand .service--expand__price {
+  color: rgb(216, 216, 216);
+  font-size: calc(13px + 0.2dvw);
+}
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .service--expand__wrapper .service--expand:nth-child(odd) .service--expand__name {
+  color: #a3a5a8;
+  font-size: calc(13px + 0.2dvw);
+}
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .service--expand__wrapper .service--expand:nth-child(odd) .service--expand__price {
+  color: #a3a5a8;
+  font-size: calc(13px + 0.2dvw);
+}
+.price-list .price-list--services__wrapper .price-list--services .price-list--service .service--expand__wrapper.active {
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+  margin: 24px 0px;
 }
 
 .footer {

@@ -18,10 +18,12 @@
   @media (max-width: 414px) {
     padding: 56px 14px;
   }
+
   .price-list--info__wrapper {
     display: flex;
     width: 100%;
     padding: 0px 24px;
+
     .info--content {
       width: 50%;
 
@@ -29,6 +31,7 @@
         color: $color-almost-white;
         font-size: $font-size-big;
       }
+
       .info--content__contact-us {
         display: flex;
         align-items: center;
@@ -57,10 +60,10 @@
       flex-direction: column;
       width: 50%;
       padding: 24px;
+
       .price-list--service {
         display: flex;
-        align-items: center;
-        flex-direction: row;
+        flex-direction: column;
         padding: 12px 0px;
         border-bottom: 1px solid $color-grey;
         width: 100%;
@@ -73,39 +76,97 @@
           color: $color-grey;
           font-size: calc(12px + 0.1dvw);
         }
+
         .price-list--service__name {
           color: $color-almost-white;
           padding-left: 48px;
           font-size: $font-size-medium;
         }
-        .material-symbols-outlined {
+
+        .price-list--service__button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          padding: 6px;
           position: absolute;
           right: 9px;
-          color: $color-almost-white;
+          .fa-chevron-down, .fa-times {
+            color: $color-almost-white;
+          }
+          .fa-chevron-down {
+            display: flex;
+          }
+          .fa-times {
+            display: none;
+          }
+          .service--expand__wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            display: none;
+
+            .service--expand {
+              display: flex;
+              justify-content: space-between;
+              flex-direction: row;
+              padding: 8px 12px 8px 24px;
+              border-bottom: 1px solid rgb(43, 43, 43);
+              .service--expand__name {
+                color: $color-almost-white;
+                font-size: $font-size-small;
+              }
+              .service--expand__price {
+                color: $color-almost-white;
+                font-size: $font-size-small;
+              }
+            }
+          }
         }
-      }
+        .price-list--service__button.active {
+          .fa-chevron-down {
+            display: none;
+          }
+          .fa-times {
+            display: flex;
+          }
+        }
+        .service--expand__wrapper {
+          display: none;
 
-      .service--expand__wrapper {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        display: none;
+          .service--expand {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            padding: 8px 12px 8px 24px;
+            border-bottom: 1px solid rgb(43, 43, 43);
 
-        .service--expand {
+            .service--expand__name {
+              color: $color-almost-white;
+              font-size: $font-size-small;
+            }
+
+            .service--expand__price {
+              color: $color-almost-white;
+              font-size: $font-size-small;
+            }
+          }
+          .service--expand:nth-child(odd) {
+            .service--expand__name {
+              color: $color-grey-from-logo;
+              font-size: $font-size-small;
+            }
+            .service--expand__price {
+              color: $color-grey-from-logo;
+              font-size: $font-size-small;
+            }
+          }
+        }
+        .service--expand__wrapper.active {
+          flex-direction: column;
+          width: 100%;
           display: flex;
-          justify-content: space-between;
-          flex-direction: row;
-          padding: 8px 12px 8px 24px;
-          border-bottom: 1px solid rgb(43, 43, 43);
-          .service--expand__name {
-            color: $color-almost-white;
-            font-size: $font-size-small;
-          }
-          .service--expand__price {
-            color: $color-almost-white;
-            font-size: $font-size-small;
-
-          }
+          margin: 24px 0px;
         }
       }
     }
