@@ -323,10 +323,13 @@
 }
 .price-list .price-list--info__wrapper {
   display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 0px 24px;
 }
 .price-list .price-list--info__wrapper .info--content {
+  display: flex;
+  flex-direction: column;
   width: 50%;
 }
 .price-list .price-list--info__wrapper .info--content .info--content__text {
@@ -349,15 +352,37 @@
 .price-list .price-list--info__wrapper .info--content .info--content__contact-us:focus {
   transform: scale(0.96);
 }
+@media (max-width: 1000px) {
+  .price-list .price-list--info__wrapper .info--content {
+    width: 100%;
+  }
+}
 .price-list .price-list--services__wrapper {
   display: flex;
+  flex-direction: row;
   width: 100%;
+}
+@media (max-width: 1000px) {
+  .price-list .price-list--services__wrapper {
+    padding: 24px 0px;
+  }
+}
+@media (max-width: 1000px) {
+  .price-list .price-list--services__wrapper {
+    flex-direction: column;
+  }
 }
 .price-list .price-list--services__wrapper .price-list--services {
   display: flex;
   flex-direction: column;
   width: 50%;
   padding: 24px;
+}
+@media (max-width: 1000px) {
+  .price-list .price-list--services__wrapper .price-list--services {
+    width: 100%;
+    padding: 0px;
+  }
 }
 .price-list .price-list--services__wrapper .price-list--services .price-list--service {
   display: flex;
@@ -397,27 +422,6 @@
 .price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button .fa-times {
   display: none;
 }
-.price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button .service--expand__wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  display: none;
-}
-.price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button .service--expand__wrapper .service--expand {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  padding: 8px 12px 8px 24px;
-  border-bottom: 1px solid rgb(43, 43, 43);
-}
-.price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button .service--expand__wrapper .service--expand .service--expand__name {
-  color: rgb(216, 216, 216);
-  font-size: calc(13px + 0.2dvw);
-}
-.price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button .service--expand__wrapper .service--expand .service--expand__price {
-  color: rgb(216, 216, 216);
-  font-size: calc(13px + 0.2dvw);
-}
 .price-list .price-list--services__wrapper .price-list--services .price-list--service .price-list--service__button.active .fa-chevron-down {
   display: none;
 }
@@ -434,6 +438,11 @@
   padding: 8px 12px 8px 24px;
   border-bottom: 1px solid rgb(43, 43, 43);
 }
+@media (max-width: 600px) {
+  .price-list .price-list--services__wrapper .price-list--services .price-list--service .service--expand__wrapper .service--expand {
+    padding: 8px;
+  }
+}
 .price-list .price-list--services__wrapper .price-list--services .price-list--service .service--expand__wrapper .service--expand .service--expand__name {
   color: rgb(216, 216, 216);
   font-size: calc(13px + 0.2dvw);
@@ -441,14 +450,13 @@
 .price-list .price-list--services__wrapper .price-list--services .price-list--service .service--expand__wrapper .service--expand .service--expand__price {
   color: rgb(216, 216, 216);
   font-size: calc(13px + 0.2dvw);
+  padding-left: 12px;
 }
 .price-list .price-list--services__wrapper .price-list--services .price-list--service .service--expand__wrapper .service--expand:nth-child(odd) .service--expand__name {
   color: #a3a5a8;
-  font-size: calc(13px + 0.2dvw);
 }
 .price-list .price-list--services__wrapper .price-list--services .price-list--service .service--expand__wrapper .service--expand:nth-child(odd) .service--expand__price {
   color: #a3a5a8;
-  font-size: calc(13px + 0.2dvw);
 }
 .price-list .price-list--services__wrapper .price-list--services .price-list--service .service--expand__wrapper.active {
   flex-direction: column;

@@ -21,10 +21,13 @@
 
   .price-list--info__wrapper {
     display: flex;
+    flex-direction: column;
     width: 100%;
     padding: 0px 24px;
 
     .info--content {
+      display: flex;
+      flex-direction: column;
       width: 50%;
 
       .info--content__text {
@@ -48,18 +51,35 @@
       .info--content__contact-us:focus {
         transform: scale(0.96);
       }
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
     }
   }
 
   .price-list--services__wrapper {
     display: flex;
+    flex-direction: row;
     width: 100%;
+    @media (max-width: 1000px) {
+      padding: 24px 0px;
+    }
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
 
     .price-list--services {
       display: flex;
       flex-direction: column;
       width: 50%;
       padding: 24px;
+
+      @media (max-width: 1000px) {
+        width: 100%;
+        padding: 0px;
+      }
+
 
       .price-list--service {
         display: flex;
@@ -100,28 +120,6 @@
           .fa-times {
             display: none;
           }
-          .service--expand__wrapper {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            display: none;
-
-            .service--expand {
-              display: flex;
-              justify-content: space-between;
-              flex-direction: row;
-              padding: 8px 12px 8px 24px;
-              border-bottom: 1px solid rgb(43, 43, 43);
-              .service--expand__name {
-                color: $color-almost-white;
-                font-size: $font-size-small;
-              }
-              .service--expand__price {
-                color: $color-almost-white;
-                font-size: $font-size-small;
-              }
-            }
-          }
         }
         .price-list--service__button.active {
           .fa-chevron-down {
@@ -140,6 +138,9 @@
             flex-direction: row;
             padding: 8px 12px 8px 24px;
             border-bottom: 1px solid rgb(43, 43, 43);
+            @media (max-width: 600px) {
+              padding: 8px;
+            }
 
             .service--expand__name {
               color: $color-almost-white;
@@ -149,16 +150,15 @@
             .service--expand__price {
               color: $color-almost-white;
               font-size: $font-size-small;
+              padding-left: 12px;
             }
           }
           .service--expand:nth-child(odd) {
             .service--expand__name {
               color: $color-grey-from-logo;
-              font-size: $font-size-small;
             }
             .service--expand__price {
               color: $color-grey-from-logo;
-              font-size: $font-size-small;
             }
           }
         }
